@@ -1,0 +1,1 @@
+const squareSum = (numbers) => numbers.reduce((acc, el)=> acc + el**2, 0)
