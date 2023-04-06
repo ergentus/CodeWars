@@ -15,21 +15,27 @@ Examples
 * Input: [2,2,1,2,1], output = [2,2,2,1]
  */
 
+// function removeSmallest(numbers) {
+//
+//    if (numbers.length <= 1) {
+//       return []
+//    }
+//
+//    let arr = [...numbers]
+//    let number = [...numbers].sort((a, b) => a - b)[0]
+//    for (let i = 0; i < arr.length; i++) {
+//       if (numbers[i] === number) {
+//          arr.splice(i, 1)
+//          break
+//       }
+//    }
+//    return arr
+// }
+
 function removeSmallest(numbers) {
+   let indexOfMin = numbers.indexOf(Math.min(...numbers));
 
-   if (numbers.length <= 1) {
-      return []
-   }
-
-   let arr = [...numbers]
-   let number = [...numbers].sort((a, b) => a - b)[0]
-   for (let i = 0; i < arr.length; i++) {
-      if (numbers[i] === number) {
-         arr.splice(i, 1)
-         break
-      }
-   }
-   return arr
+   return [...numbers.slice(0, indexOfMin), ...numbers.slice(indexOfMin + 1)];
 }
 
-console.log(removeSmallest([122, 101, 197, 326, 0]))
+console.log(removeSmallest([122, 101, 197, 0, 326]))
