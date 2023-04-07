@@ -95,3 +95,14 @@ const rNames = students.reduce((newArr, el) => {
 }, [])
 
 console.log(rNames);
+
+class Samurai {
+   constructor(name) {
+      this.name = name
+   }
+   hello() {
+      alert(this.name)
+   }
+}
+
+let shogun = new Samurai('Oleg')
