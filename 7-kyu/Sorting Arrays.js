@@ -13,14 +13,14 @@
 // Each element in the arrays will start with a unique letter so there will only be a single match for each element.
 
 
-function sortArray(a1, a2) {
-   return a2.sort((x, y) => {
-      const i1 = a1.findIndex(a => a[0] === x[0])
-      const i2 = a1.findIndex(a => a[0] === y[0])
-      return i1 - i2
-   })
-}
-
+// function sortArray(a1, a2) {
+//    return a2.sort((x, y) => {
+//       const i1 = a1.findIndex(a => a[0] === x[0])
+//       const i2 = a1.findIndex(a => a[0] === y[0])
+//       return i1 - i2
+//    })
+// }
+//
 const a1 = ['giraffe', 'orangutan', 'impala', 'elephant', 'rhino']
 const a2 = ['rattlesnake', 'eagle', 'geko', 'iguana', 'octopus']
 
@@ -38,5 +38,7 @@ const a2 = ['rattlesnake', 'eagle', 'geko', 'iguana', 'octopus']
 //    }
 //    return result
 // }
+
+const sortArray = (a1, a2) => a1.map(v => a2.find(w => v[0] === w[0]))
 
 console.log(sortArray(a1, a2))
