@@ -28,9 +28,13 @@ Don't forget to convert the percent parameter as a percentage in the body of you
 
 function nbYear(p0, percent, aug, p) {
    let count = 0
-   for (let i = p0; i < p; i += i * percent/100 + aug) {
+   percent = percent / 100
+
+   while ( p0 < p) {
+      p0 += Math.floor(p0 * percent + aug)
       count++
    }
+
    return count
 }
 
