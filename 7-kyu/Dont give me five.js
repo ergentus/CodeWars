@@ -13,8 +13,7 @@ The start number will always be smaller than the end number. Both numbers can be
 function dontGiveMeFive(start, end) {
    let arr = []
    for (let i = start; i <= end; i++) {
-      if (i.toString().includes('5')) {
-      } else {
+      if (!i.toString().includes('5')) {
          arr.push(i)
       }
    }
