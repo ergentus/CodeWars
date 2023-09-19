@@ -11,17 +11,17 @@ Examples (input --> output)
 Note you should only return a number, the count of divisors. The numbers between parentheses are shown only for you to see which numbers are counted in each case.
  */
 
-function getDivisorsCnt(n){
-   let count = 0;
+function getDivisorsCnt(n) {
+   let count = 0
    for (let i = 1; i <= Math.sqrt(n); i++) {
       if (n % i === 0) {
-         count++;
+         count++
          if (i !== n / i) {
-            count++;
+            count++
          }
       }
    }
-   return count;
+   return count
 }
 
 console.log(getDivisorsCnt(15))
