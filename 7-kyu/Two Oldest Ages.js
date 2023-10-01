@@ -11,7 +11,7 @@ For example (Input --> Output):
  */
 
 function twoOldestAges(ages){
-   return ages.sort((a, b) => a - b).splice(-2)
+   return ages.sort((a, b) => a - b).slice(-2)
 }
 
 console.log(twoOldestAges([1,5,87,45,8,8]))
