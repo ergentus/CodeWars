@@ -14,15 +14,15 @@ Content is in fact not necessary in the body of the function "evaporator", you c
 
 // ! my note ---THIS TASK'S INSTRUCTION IS VERY BAD. ALSO SOME PARAMETERS DONT HAVE THE SENCE
 
-function evaporator(content, evap_per_day, threshold){
-   let days = 0;
-   let gas = 100;
+function evaporator(content, evap_per_day, threshold) {
+   let days = 0
+   let gas = 100
 
-   while(gas >= threshold){
-      gas -= gas * evap_per_day / 100;
-      days++;
+   while (gas >= threshold) {
+      gas -= gas * evap_per_day / 100
+      days++
    }
-   return days;
+   return days
 }
 
 console.log(evaporator(10, 10, 10))
