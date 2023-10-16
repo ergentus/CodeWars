@@ -9,11 +9,11 @@ function isValidWalk(walk) {
       n: 1,
       s: -1,
       w: 2,
-      e: -2
+      e: -2,
    }
 
-   const count = walk.reduce( (a, e) => way[e] + a , 0)
+   const count = walk.reduce((a, e) => way[e] + a, 0)
    return walk.length === 10 && !count
 }
 
-console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']))
+console.log(isValidWalk(['n', 's', 'n', 's', 'n', 's', 'n', 's', 'n', 's']))
