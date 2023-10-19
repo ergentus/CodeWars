@@ -12,3 +12,5 @@ function toCamelCase(str) {
 }
 
 console.log(toCamelCase('the_stealth_warrior'))
+
+console.log(1 % 3)
