@@ -9,7 +9,7 @@ Your function will return the index 3, because at the 3rd position of the array,
 
 function findEvenIndex(arr) {
    for (let i = 0; i < arr.length; i++) {
-      if (arr.slice(0, i).reduce((a, e) => a + e, 0) === arr.slice(i + 1 , arr.length).reduce((a, e) => a + e, 0)) {
+      if (arr.slice(0, i).reduce((a, e) => a + e, 0) === arr.slice(i + 1).reduce((a, e) => a + e, 0)) {
          return i
       }
    }
