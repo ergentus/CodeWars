@@ -12,11 +12,11 @@ decodeMorse('.... . -.--   .--- ..- -.. .')
 //should return "HEY JUDE"
 
 The Morse code table is preloaded for you as a dictionary, feel free to use it:
-//cmt from me: it means that we can see the object of MORSE_CODE only on the codewars's website. so i just wrote own object
+
  */
 
 const decodeMorse = function(morseCode){
-   const MORSE_CODE = {
+   const MORSE_CODE = { //cmt from me: it means that we can see the object of MORSE_CODE only on the codewars's website. so i just wrote own object
       '.-': 'A',
       '-...': 'B',
       '-.-.': 'C',
