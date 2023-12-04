@@ -14,10 +14,9 @@ For the word "strength", solve("strength") = 57
  */
 
 function solve(s) {
-   const alphabet = ' abcdefghijklmnopqrstuvwxyz'
    const arr = s.split(/[aeiou]/g)
 
-   return Math.max(...arr.map( (e,i) => e.split('').reduce((a,e) => a + alphabet.indexOf(e) ,0)))
+   return Math.max(...arr.map((e) => e.split('').reduce((a, e) => a + e.charCodeAt(0) - 96, 0)))
 }
 
-console.log(solve("soueououiueikheuuoiqajopiiuiodafiaddetgewexanoifsjuuycddcyqeicirpeauaruabfiemejhogayoouqodooreooituuqeeaai"))
+console.log(solve('soueououiueikheuuoiqajopiiuiodafiaddetgewexanoifsjuuycddcyqeicirpeauaruabfiemejhogayoouqodooreooituuqeeaai'))
